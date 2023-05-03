@@ -13,6 +13,7 @@ const Header = () => {
             <Link className='px-5' to='/'>Home</Link>
            <Link className='px-2' to='/blog'>Blog</Link>
             <Link className='px-5' to='/about'>About</Link>
+            <Link className='px-5' to='/login'>Login</Link>
             </div>
            <div className='mx-5 px-5'>
             <p>profile</p>
