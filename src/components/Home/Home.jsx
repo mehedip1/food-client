@@ -1,5 +1,8 @@
 import React from 'react';
 import Section from '../Section/Section';
+import Card from '../Card';
+import Chef from '../Chef';
+
 
 
 
@@ -12,6 +15,9 @@ const Home = () => {
         <>
 
        <Section></Section>
+       <Chef></Chef>
+       
+        <Card></Card>
      
         </>
        
