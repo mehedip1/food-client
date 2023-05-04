@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from './AuthProviders';
+
 
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
+    // const {createUser} = useContext(AuthContext);
 
     const handleRegister = event =>{
         event.preventDefault();
@@ -46,13 +46,19 @@ const Register = () => {
               <label className="label">
                 <span className="label-text">Name</span>
               </label>
-              <input type="text" name='name' placeholder="email" className="input input-bordered" required />
+              <input type="text" name='name' placeholder="name" className="input input-bordered" required />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
               <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo</span>
+              </label>
+              <input type="photo" name='photo' placeholder="photo url" className="input input-bordered" required />
             </div>
             <div className="form-control">
               <label className="label">

@@ -13,7 +13,10 @@ import About from './components/About.jsx';
 import Recipes from './components/Recipes.jsx';
 import Login from './components/Login.jsx';
 import Register from './components/Register.jsx';
-// import AuthProviders from './components/AuthProviders.jsx';
+import AuthProvider from './components/Providers/AuthProvider.jsx';
+
+
+
 
 
 
@@ -46,14 +49,17 @@ const router = createBrowserRouter([
         path:'/recipes',
         element: <Recipes></Recipes>
       }
+      
     ]
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   {/* <AuthProviders> */}
+ 
+   <AuthProvider>
    <RouterProvider router={router}></RouterProvider>
-   {/* </AuthProviders> */}
+   </AuthProvider>
+  
   </React.StrictMode>,
 )
