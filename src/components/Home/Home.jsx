@@ -10,16 +10,17 @@ import Chef from '../Chef';
 
 
 
+
 const Home = () => {
     return (
-        <>
+        <div className='bg-blue-950	'>
 
        <Section></Section>
        <Chef></Chef>
        
         <Card></Card>
      
-        </>
+        </div>
        
          
         

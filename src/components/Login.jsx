@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from './Providers/AuthProvider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../firebase/firebase.config';
+import { FaGoogle } from 'react-icons/fa';
 
 
 
@@ -42,12 +43,12 @@ const Login = () => {
     
    <div className="hero min-h-screen bg-base-200">
     <div className="hero-content flex-col lg:flex-row-reverse">
-    <div className="text-center lg:text-left">
+    <div className="text-center lg:text-left ">
       <h1 className="text-5xl font-bold">Please Login now!</h1>
  
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <form onSubmit={handleLogin} className="card-body">
+      <form onSubmit={handleLogin} className="card-body bg-teal-300	">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -67,7 +68,7 @@ const Login = () => {
         <button className="btn btn-primary">Login</button>
         </div>
       </form>
-      <button onClick={handleGoogleSignIn} className="btn btn-warning">Google Login</button>
+      <button onClick={handleGoogleSignIn} className="btn btn-warning"> <FaGoogle /> <span className='ms-3'>Google Login</span></button>
       
     </div>
      </div>

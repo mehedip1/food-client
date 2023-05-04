@@ -15,8 +15,8 @@ const [categories, setCategories] = useState([]);
   return (
     
     <>
-      <h2 className='text-3xl font-bold text-center mt-5'>Chef section</h2>
-      <div className='md:grid grid grid-cols-2 mt-5'>
+      <h2 className='text-3xl font-bold text-center text-white mt-5'>Chef section</h2>
+      <div className='md:grid grid grid-cols-3 mt-5 gap-5'>
          
         
      
@@ -27,8 +27,8 @@ const [categories, setCategories] = useState([]);
         categories.map(category =>
         <div key={category.id}>
         
-         <div className="card w-96 bg-base-100 shadow-xl">
-         <figure><img src={category.img} alt="Shoes" /></figure>
+         <div className="card w-45 bg-base-100 shadow-md">
+         <figure><img src={category.img} alt="" /></figure>
        <div className="card-body">
        <h2 className="card-title">{category.name}
       

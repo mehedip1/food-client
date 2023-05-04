@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from './Providers/AuthProvider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../firebase/firebase.config';
+import { FaGoogle } from 'react-icons/fa';
 
 
 
@@ -59,7 +60,7 @@ const Register = () => {
      
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form onSubmit={handleRegister} className="card-body">
+          <form onSubmit={handleRegister} className="card-body bg-cyan-500	">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -91,7 +92,7 @@ const Register = () => {
               <button className="btn btn-primary">Login</button>
             </div>
           </form>
-          <button onClick={handleGoogleSignIn} className="btn btn-warning">Google Login</button>
+          <button onClick={handleGoogleSignIn} className="btn btn-warning text-white"> <FaGoogle /><span className='ms-3'>Google Login</span>  </button>
           <br />
           <p className='text-white bg-red-400'>{error}</p>
           
