@@ -1,13 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from './Providers/AuthProvider';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../firebase/firebase.config';
 
 
 
 const Register = () => {
-    // const {createUser} = useContext(AuthContext);
+    const {createUser} = useContext(AuthContext);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    const [error, setError]= useState('');
+    const [success, setSuccess] = useState('');
 
     const handleRegister = event =>{
         event.preventDefault();
+        setSuccess('')
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
@@ -21,12 +29,22 @@ const Register = () => {
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser);
+            event.target.reset();
+            setError('');
+             setSuccess('user successfully create')
         })
         .catch(error =>{
-            console.log(error)
+          console.log(error.message)
+            setError(error.message);
         })
 
     }
+    const handleGoogleSignIn = () =>{
+      signInWithPopup(auth,provider)
+      .then()
+      .catch()
+    }
+
 
 
 
@@ -73,6 +91,10 @@ const Register = () => {
               <button className="btn btn-primary">Login</button>
             </div>
           </form>
+          <button onClick={handleGoogleSignIn} className="btn btn-warning">Google Login</button>
+          <br />
+          <p className='text-white bg-red-400'>{error}</p>
+          
         </div>
          </div>
         </div>
