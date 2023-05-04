@@ -14,6 +14,7 @@ import Recipes from './components/Recipes.jsx';
 import Login from './components/Login.jsx';
 import Register from './components/Register.jsx';
 import AuthProvider from './components/Providers/AuthProvider.jsx';
+import Error from './components/Error.jsx';
 
 
 
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
   {
     path:"/",
     element:<Main></Main>,
+    errorElement: <Error></Error>,
     children:[
       {
         path:'/',
