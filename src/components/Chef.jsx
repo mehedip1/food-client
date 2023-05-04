@@ -6,7 +6,7 @@ const Chef = () => {
 
 const [categories, setCategories] = useState([]);
   useEffect(() =>{
-    fetch('http://localhost:5000/categories')
+    fetch('https://the-yum-food-server-mehedip1.vercel.app/categories')
     .then(res => res.json())
     .then(data => setCategories(data))
     .catch(error => console.log(error))
@@ -27,14 +27,14 @@ const [categories, setCategories] = useState([]);
         categories.map(category =>
         <div key={category.id}>
         
-         <div className="card w-45 bg-base-100 shadow-md">
+         <div className="card w-45 bg-base-100 shadow-md hover:bg-slate-600">
          <figure><img src={category.img} alt="" /></figure>
        <div className="card-body">
        <h2 className="card-title">{category.name}
       
        </h2>
       <p>
-       <Link>{category.recipes}</Link></p>
+       <Link>Recipes:{category.recipes}</Link></p>
 
        <p>Experience:<Link>{category.experience}</Link></p>
        <p>Likes:<Link>{category.likes}</Link></p>

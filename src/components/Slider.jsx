@@ -1,40 +1,16 @@
 import React from 'react';
+import chef from '../../public/logo/chef.jfif'
 
 const Slider = () => {
     return (
         <div>
-            <section>
-            <div className="carousel w-full">
-  <div id="slide1" className="carousel-item relative w-full">
-    <img src="https://www.sbs.com.au/food/sites/sbs.com.au.food/files/ep8_okonomiyaki.jpg" className="w-full"/>
-   
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide4" className="btn btn-circle">❮</a> 
-      <a href="#slide2" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide2" className="carousel-item relative w-full">
-    <img src="https://www.sbs.com.au/food/sites/sbs.com.au.food/files/ep8_okonomiyaki.jpg" className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide1" className="btn btn-circle">❮</a> 
-      <a href="#slide3" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide3" className="carousel-item relative w-full">
-    <img src="https://www.sbs.com.au/food/sites/sbs.com.au.food/files/ep8_okonomiyaki.jpg" className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide2" className="btn btn-circle">❮</a> 
-      <a href="#slide4" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide4" className="carousel-item relative w-full">
-    <img src="https://www.sbs.com.au/food/sites/sbs.com.au.food/files/ep8_okonomiyaki.jpg" className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide3" className="btn btn-circle">❮</a> 
-      <a href="#slide1" className="btn btn-circle">❯</a>
-    </div>
-  </div>
-    </div>
+            <section className='md:grid grid-cols-2 gap-5 text-white'>
+            <img className='mt-3' src={chef} alt="" />
+            <div>
+              <h2 className='text-center text-3xl mt-5'>Food Recipes</h2>
+              <p className='text-1xl text-center'>One chilly day soon, put a big pot of this easy-going 15 Bean Soup on your stove to simmer away. Pull on your slippers, putter about while the wind blows outside, and enjoy the tantalizing build-up of warm, cozy smells wafting from your kitchen. It’s a snug, contented picture, and it ends the way many happy stories do: a delicious, deeply satisfying meal.</p>
+            </div>
+    
             </section>
         </div>
     );
