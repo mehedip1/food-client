@@ -19,7 +19,24 @@ const Recipes = () => {
           </div>
           </section>
           <section className='text-white text-center text-2xl mt-2 py-5 '>
-            <h1>One chilly day soon, put a big pot of this easy-going 15 Bean Soup on your stove to simmer away. Pull on your slippers, putter about while the wind blows outside, and enjoy the tantalizing build-up of warm, cozy smells wafting from your kitchen. It’s a snug, contented picture, and it ends the way many happy stories do: a delicious, deeply satisfying meal.</h1>
+
+        <h2 className='text-3xl'>
+        Ingredients: <span>
+        8 oz mushrooms,
+        2 tbsp butter,
+        1 onion,
+        2 cloves garlic,
+        3 tbsp flour,
+        3 cups milk,
+        2 cups chicken or vegetable broth,
+         1 tsp salt,
+        1/4 tsp black pepper,
+        1 tsp thyme,
+        1/2 cup heavy cream
+        </span>
+       
+        </h2>
+          
           </section>
           
             
